@@ -1,2 +1,2 @@
-# chatroom
+# Real time chatroom
 Real time chatroom with noSQL firebase database and javascript
