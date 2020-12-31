@@ -1,4 +1,3 @@
-// updating the username
 // updating the room
 
 class Chatroom {
@@ -36,10 +35,11 @@ class Chatroom {
                 });
             });
     }
+
+    // updating the username
+    updateUsername(username) {
+        this.username = username;
+    }
 }
 
 const chatroom = new Chatroom('general', 'jean-yves');
-
-chatroom.getChats((data) => {
-    console.log(data);
-})
