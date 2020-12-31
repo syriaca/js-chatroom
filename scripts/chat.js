@@ -26,6 +26,7 @@ class Chatroom {
     // setting up a real-time listener to get new chats
     getChats(callback) {
         this.chats
+            .where('room', '==', this.room)
             .onSnapshot(snapshot => {
                 snapshot.docChanges().forEach(change => {
                     if (change.type === 'added') {
