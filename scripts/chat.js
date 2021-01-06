@@ -38,27 +38,14 @@ class Chatroom {
     // updating the username
     updateUsername(username) {
         this.username = username;
+        console.log('username updated');
     }
 
     // updating the room
     updateRoom(room) {
         this.room = room;
-        console.log('room updated');
         if (this.unsub) { this.unsub(); };
+        console.log('room updated');
     }
 }
 
-const chatroom = new Chatroom('general', 'jean-yves');
-
-chatroom.getChats((data) => {
-    console.log(data);
-})
-
-setTimeout(() => {
-    chatroom.updateRoom('general');
-    chatroom.updateUsername('Jean-Yves');
-    chatroom.getChats((data) => {
-        console.log(data);
-    });
-    chatroom.addChat('we get to e new general room');
-}, 3000);
