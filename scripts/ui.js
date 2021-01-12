@@ -7,7 +7,7 @@ class ChatUI {
     }
 
     render(data) {
-        const html = `
+        const listItem = `
             <li class="list-group-item">
                 <span class="username">${data.username}</span>
                 <span class="message">${data.message}</span>
@@ -15,6 +15,6 @@ class ChatUI {
             </li>
         `;
         
-        this.list.innerHTML += html;
+        this.list.innerHTML += listItem;
     }
 }

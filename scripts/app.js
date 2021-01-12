@@ -5,5 +5,5 @@ const chatList = document.querySelector('.chat-list');
 const chatUI = new ChatUI(chatList);
 const chatroom = new Chatroom('gaming', 'jean-yves');
 
-// // get chat and render
+// get chat and render
 chatroom.getChats(data => chatUI.render(data));
