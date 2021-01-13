@@ -4,9 +4,12 @@ const newChat = document.querySelector('.new-chat');
 const newName = document.querySelector('.new-name');
 const alertMessage = document.querySelector('.alert-message');
 
+// Check local storage for a username
+const username = localStorage.userName ? localStorage.userName : "anonymous";
+
 // class instances
 const chatUI = new ChatUI(chatList);
-const chatroom = new Chatroom('gaming', 'jean-yves');
+const chatroom = new Chatroom('gaming', username);
 
 // Add new chat
 newChat.addEventListener('submit', e => {
